@@ -41,12 +41,19 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
    
     ### Technology Stack
     **Django :** A high-level Python web framework used for rapid API development with built-in admin, ORM, and authentication support.
+
     **GraphQL  :** A query language for APIs that allows clients to request exactly the data they need, improving performance and flexibility.
+
     **PostgreSQL / MySQL (alternative to MongoDB) :** Relational databases used for structured data storage when complex queries and relationships are needed (e.g., bookings, payments, users).
+
     **Sequelize / SQLAlchemy (if using PostgreSQL/MySQL) :** ORMs (Object Relational Mappers) used to interact with relational databases using JavaScript/Python objects.
+
     **JWT (JSON Web Token) :** Used for secure stateless authentication between the client and server.
+
     **Passport.js / Django REST Framework Auth :** Libraries used to implement authentication strategies such as local login, Google OAuth, etc.
+
     **Docker :** Used for containerizing the backend application for consistent development, testing, and deployment environments.
+
     **Git / GitHub :** For version control, collaboration, and continuous integration workflows.
 
     ### Database Design
