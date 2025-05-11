@@ -215,4 +215,13 @@ Packages the backend and frontend applications into containers to ensure consist
 **Linters & Test Runners (ESLint, Jest, etc.)**
 Ensures code quality and runs automated tests on every push or pull request.
 
+
+## UI/UX Design Planning
+
+## UI/UX Design Planning.
+
+## Project Roles and Responsibilities
+
+## UI Component Patterns
+
     
