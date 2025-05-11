@@ -59,6 +59,7 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
     ### Database Design
     This section describes the core data entities involved in the Airbnb clone project and their relationships. The database design supports functionalities such as property listing, user bookings, reviews, and payment tracking.
     1.  Users
+    
     Represents individuals who use the platform—either as guests or hosts.
     
     **Fields:**
@@ -74,6 +75,7 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
    -  A user can have multiple payments associated with bookings.
  
      2. Properties
+    
     Represents rental listings available on the platform.
     
     **Fields:**
@@ -89,6 +91,7 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
     - A property can have multiple images (linked via a separate entity if needed).
  
       3. Bookings
+      
       Tracks when a guest books a property for specific dates.
       
       **Fields:**
@@ -103,7 +106,8 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
       - A booking can have one associated payment .
      
       4. Reviews
-        Stores feedback from guests about a property.
+
+         Stores feedback from guests about a property.
         
         **Fields:**
         - id: Unique identifier for the review.
@@ -117,6 +121,7 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
         - A property can have many reviews .
        
       5. Payments
+      
       Tracks financial transactions related to bookings.
       
       **Fields:**
@@ -160,28 +165,38 @@ Security is a top priority for the Airbnb Clone Project, especially since the sy
 #### Key Security Measures
 **Authentication (JWT / OAuth)**
 Users must log in using secure tokens (JWT) or third-party authentication (e.g., Google OAuth). Tokens are used to verify identity across requests.
+
 **Authorization**
 Role-based access control ensures users can only perform actions they're allowed to (e.g., only hosts can edit properties).
+
 **HTTPS Encryption**
 All API communication is encrypted using HTTPS to prevent man-in-the-middle attacks.
+
 **Rate Limiting**
 Prevents abuse by limiting the number of requests a user or IP can make within a certain timeframe.
+
 **Input Validation**
 All incoming data is validated to prevent injection attacks (e.g., SQL injection, XSS).
+
 **Password Hashing**
 User passwords are securely hashed using algorithms like bcrypt or Argon2 before being stored in the database.
+
 **Secure Payment Handling**
 Payment information is not stored directly; instead, trusted third-party services (like Stripe) are used to handle transactions securely.
 
 #### Why Security Matters in Each Area
 **User Data Protection :**
 Personal details like email addresses, phone numbers, and payment methods must be kept private. Strong authentication and encryption help protect against data leaks and unauthorized access.
+
 **Property & Booking Management :**
 Hosts and guests interact with listings and bookings frequently. Authorization ensures only the rightful owners can modify their data, preventing fraud or tampering.
+
 **Payment Transactions :**
 Financial data must be handled with extreme care. Using tokenized payments and avoiding direct storage of card details minimizes risk and complies with PCI-DSS standards.
+
 **Search & Messaging Features :**
 While less sensitive, these features still need protection from spam, abuse, and unauthorized usage. Rate limiting and input validation help maintain system stability and user trust.
+
 **Notifications & Communication :**
 Ensuring messages between users are sent securely and cannot be intercepted helps maintain privacy and platform credibility.
 
@@ -193,8 +208,10 @@ Implementing a CI/CD pipeline is essential for maintaining code quality, catchin
 #### Tools Used
 **GitHub Actions**
 Automates workflows for building, testing, and deploying the application directly from the GitHub repository.
+
 **Docker**
 Packages the backend and frontend applications into containers to ensure consistency across development, testing, and production environments.
+
 **Linters & Test Runners (ESLint, Jest, etc.)**
 Ensures code quality and runs automated tests on every push or pull request.
 
